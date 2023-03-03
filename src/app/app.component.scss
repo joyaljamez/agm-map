@@ -1,0 +1,29 @@
+agm-map {
+  height: 300px;
+}
+
+.map-container {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 1rem;
+  height: 100%;
+  width: 80%;
+  margin: 200px auto;
+
+  &_cities {
+    border: 1px solid rgb(10, 93, 195);
+    border-radius: 5px;
+    padding: 1rem;
+    overflow-y: scroll;
+    height: 400px;
+  }
+
+  &_selected {
+    width: 100%;
+    border: 1px solid rgb(10, 93, 195);
+    height: 50px;
+    margin: 20px auto;
+    padding: 30px;
+  }
+}

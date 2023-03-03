@@ -1,0 +1,10 @@
+.city-lists_city {
+  padding: 1rem;
+  border: 1px solid rgb(10, 93, 195);
+  //hover
+
+  &:hover {
+    background-color: rgb(10, 93, 195);
+    color: white;
+  }
+}

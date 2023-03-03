@@ -1,0 +1,17 @@
+<div *ngFor="let city of cities">
+  <div class="city-lists_city" (click)="view_in_map(city.lat,city.lng)">
+    <span class="city-lists_city_name">
+      {{city.name}}
+    </span>
+    <span class="city-lists_city_country">
+      {{city.country}}
+    </span> <br>
+    <span class="city-lists_city_lat">
+      {{city.lat}}
+    </span>,
+    <span class="city-lists_city_lng">
+      {{city.lng}}
+    </span>
+  </div>
+
+</div>
