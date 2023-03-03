@@ -6,14 +6,14 @@ import { AppComponent } from './app.component';
 import { CityListsComponent } from './city-lists/city-lists.component';
 import { AgmCoreModule } from '@agm/core';
 import { HttpClientModule } from '@angular/common/http';
-
+import { environment as env } from '../environments/environment';
 @NgModule({
   declarations: [AppComponent, CityListsComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyBcnxNl_ozX_BPVYMGxX09UORrlBe0JwjA',
+      apiKey: env.agmApiKey,
     }),
     HttpClientModule,
   ],

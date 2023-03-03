@@ -4,7 +4,8 @@ export const appConfig: AppConfig = {
   environment: 'DEVELOPMENT',
   description: 'Application is under construction - Debugging is enabled here!',
   production: false,
-  apiBaseUrls: { 'api-1': 'http://13.232.232.76:8000/' },
+  apiBaseUrls: { 'api-1': 'http://localhost:8000/' },
+  agmApiKey: 'AIzaSyBcnxNl_ozX_BPVYMGxX09UORrlBe0JwjA',
   firebase: {},
   apiEndpoints: apiEndpoints,
 };
