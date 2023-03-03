@@ -4,6 +4,7 @@
 - TO run Angular project do
 
 ```
+npm i
 npm start
 ```
 
@@ -13,6 +14,7 @@ npm start
 
 ```
 cd ./server
+npm i
 npm start
 
 ```
