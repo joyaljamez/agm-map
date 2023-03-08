@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Inject, Output } from '@angular/core';
+import { Component, EventEmitter, Inject, Input, Output } from '@angular/core';
 import { Cities } from '../shared/models/interfaces/cities';
 import { ApiService } from '../shared/services/api/api.service';
 
@@ -9,14 +9,25 @@ import { ApiService } from '../shared/services/api/api.service';
 })
 export class CityListsComponent {
   cities: any = [];
+  @Input() reloadCities: boolean = false;
 
   @Output() coordinates = new EventEmitter<string>();
 
   constructor(@Inject(ApiService) private apiService: ApiService) {}
-  ngOnInit(): void {
+
+  getCities() {
     this.apiService.getCityList().subscribe((res) => {
       this.cities = res;
     });
+  }
+
+  ngOnInit(): void {
+    this.getCities();
+  }
+  ngOnChanges() {
+    if (this.reloadCities) {
+      this.getCities();
+    }
   }
   view_in_map(lat: string, lng: string) {
     console.log(lat, lng);

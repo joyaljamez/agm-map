@@ -1,13 +1,13 @@
 <div class="map-container">
   <div class="map-container_cities">
-    <app-city-lists (coordinates)="set_coordinates($event)"></app-city-lists>
+    <app-city-lists (coordinates)="set_coordinates($event)" [reloadCities]="reloadCities"></app-city-lists>
   </div>
   <div class="map-container_maps">
-    <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" [disableDefaultUI]="false" (mapClick)="mapClicked($event)">
-      <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
-    </agm-map>
-    <div class="map-container_selected" [innerHtml]="coordinates">
 
+    <div class="leaftlet-map-container ">
+      <div class="map-frame">
+        <div id="map"></div>
+      </div>
     </div>
   </div>
 </div>

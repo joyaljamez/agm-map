@@ -1,4 +1,13 @@
-agm-map {
+.leaftlet-map-container {
+  margin: 30px;
+}
+
+.map-frame {
+  border: 2px solid black;
+  height: 100%;
+}
+
+#map {
   height: 300px;
 }
 
